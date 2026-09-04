@@ -457,7 +457,10 @@ ul { margin: 0; padding: 0; list-style: none; }
     }
   .hero { min-height: auto; padding-top: 2rem; }
   .hero-content { padding: 4rem 1.25rem; }
-  .footer-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  .footer-inner .footer-brand-col { text-align: center !important; }
+  .footer-inner .footer-brand-col img { margin-left: auto !important; margin-right: auto !important; }
+
   .dishes, .testimonials, .gallery, .book-menu { padding-left: 1.25rem; padding-right: 1.25rem; }
   .carousel-btn { display: none; }
 
