@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café restaurant Banou</title>
+<meta name="description" content="Découvrez Café restaurant Banou, votre restaurant iranien authentique à Sherbrooke. Savourez nos spécialités: kebab, grillades et cuisine traditionnelle. Situé au 196 rue Wellington Nord, nous vous proposons une véritable expérience culinaire persane.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=12">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <img src="assets/logotipo.png" alt="Banou Logo" class="loader-name" id="loader-name" style="max-width: 80vw; width: 350px; height: auto;">
+</div>
+
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-word">BANOU</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#plats">Plats</a>
+      <a href="#avis">Avis</a>
+      <a href="#galerie">Expérience</a>
+      <a href="#contact">Réserver</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-media">
+      <img src="https://placehold.co/1920x1080/e5e5e5/a3a3a3?text=Imagen+Principal+(Hero)" alt="Plats persans du Café restaurant Banou" loading="eager" class="hero-bg">
+      <div class="hero-scrim"></div>
+    </div>
+    <div class="hero-content reveal">
+      <p class="eyebrow">Café restaurant Banou · Sherbrooke</p>
+      <h1>Restaurant iranien<br>authentique à Sherbrooke</h1>
+      <p class="hero-text">Découvrez l'authentique cuisine iranienne : kebabs savoureux, grillades sur charbon de bois et plats traditionnels au cœur de Sherbrooke.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Réserver une table</a>
+        <a href="#plats" class="btn btn-outline">Voir le menu</a>
+      </div>
+    </div>
+  </section>
+
+      <section class="video-promo reveal" id="promo" style="padding: 4rem 1.5rem; text-align: center;">
+    <div style="position: relative; max-width: 320px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 40px rgba(25,15,30,0.15); aspect-ratio: 9/16; background-color: var(--bg-alt);">
+      <video id="promoVideoHero" width="100%" height="100%" preload="auto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; object-fit: cover; pointer-events: none;" autoplay muted loop playsinline>
+        <source src="assets/videos/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+  <section class="dishes" id="plats">
+    <div class="section-head reveal">
+      <p class="eyebrow">À découvrir</p>
+      <h2>Nos plats populaires</h2>
+      <p class="section-sub">Un aperçu de nos classiques les plus appréciés, préparés avec des épices persanes authentiques.</p>
+    </div>
+
+    <div class="dishes-pin" id="dishesPin">
+      <div class="dish-cards" id="dishCards">
+        <div class="dish-card">
+          <article class="dish-card-content">
+            <img src="assets/platillos/ghoremeh-sabzi.jpg" alt="Ghoremeh Sabzi" loading="lazy">
+            <div class="dish-info">
+              <h3>Ghoremeh Sabzi</h3>
+              <p>Viande mijotée aux fines herbes, haricots rouges et citron séché. Un classique réconfortant. ✨</p>
+            </div>
+          </article>
+        </div>
+        <div class="dish-card">
+          <article class="dish-card-content">
+            <img src="assets/platillos/dubai-chocolate-croissant.jpg" alt="Dubai Chocolate Croissant" loading="lazy">
+            <div class="dish-info">
+              <h3>Dubai Chocolate Croissant</h3>
+              <p>Croissant garni de crème pistache et kadaïf, nappé de chocolat. ✨</p>
+            </div>
+          </article>
+        </div>
+        <div class="dish-card">
+          <article class="dish-card-content">
+            <img src="assets/platillos/kashk-e-bademjan.png" alt="Kashk-e Bademjan" loading="lazy">
+            <div class="dish-info">
+              <h3>Kashk-e Bademjan</h3>
+              <p>Aubergines crémeuses au kashk, ail, oignons frits et menthe séchée. ✨</p>
+            </div>
+          </article>
+        </div>
+        <div class="dish-card">
+          <article class="dish-card-content">
+            <img src="assets/platillos/zereshk-polo.jpg" alt="Zereshk Polo avec poulet" loading="lazy">
+            <div class="dish-info">
+              <h3>Zereshk Polo avec poulet</h3>
+              <p>Poulet tendre et riz parfumé aux baies de zereshk acidulées. Un délice coloré. ✨</p>
+            </div>
+          </article>
+        </div>
+        <div class="dish-card">
+          <article class="dish-card-content">
+            <img src="assets/platillos/creme-glacee.jpg" alt="Crème glacée au safran" loading="lazy">
+            <div class="dish-info">
+              <h3>Crème glacée au safran</h3>
+              <p>L'authenticité de la Perse : le goût unique du safran dans une crème glacée onctueuse. 💛✨</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="full-menu" id="le-menu" style="padding: 6rem 1.5rem; background-color: var(--paper);">
+    <div class="section-head reveal" style="text-align: center; margin-bottom: 4rem;">
+      <p class="eyebrow" style="color: var(--red);">Notre Menu</p>
+      <h2 style="font-family: var(--display); color: var(--charcoal); font-size: clamp(2.5rem, 5vw, 4rem);">À la carte</h2>
+      <p class="section-sub" style="max-width: 600px; margin: 0 auto; color: var(--gray);">L'authenticité et la richesse de la Perse dans chaque plat, préparé avec des ingrédients frais et des épices traditionnelles.</p>
+    </div>
+
+    <div class="menu-container" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem;">
+      
+      <!-- COLONNE 1 -->
+      <div class="menu-col">
+        
+        <!-- ENTRÉES -->
+        <div class="menu-category" style="margin-bottom: 3rem;">
+          <h3 style="font-family: var(--display); color: var(--red); font-size: 2rem; border-bottom: 1px solid rgba(88,15,28,0.2); padding-bottom: 0.5rem; margin-bottom: 1.5rem; text-align: center;">ENTRÉES</h3>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Soupe de lentilles (Dal Adas)</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">8.50 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Soupe maison préparée avec des lentilles rouges, oignons, ail, pâte de tomates et épices.</p>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Kuku Sabzi</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">12.00 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Galette persane aux herbes fraîches, œufs et épices. Servie avec yogourt et pain.</p>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Kashk-e Bademjan</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">12.50 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Purée d'aubergines grillées, oignons caramélisés, ail, menthe séchée, noix et kashk.</p>
+          </div>
+        </div>
+
+        <!-- ACCOMPAGNEMENTS -->
+        <div class="menu-category" style="margin-bottom: 3rem;">
+          <h3 style="font-family: var(--display); color: var(--red); font-size: 2rem; border-bottom: 1px solid rgba(88,15,28,0.2); padding-bottom: 0.5rem; margin-bottom: 1.5rem; text-align: center;">ACCOMPAGNEMENTS</h3>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Salade Shirazi</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">8.50 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Concombres, tomates, oignons, jus de citron et herbes fraîches.</p>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Mast-o Khiar / Mast-o Mousir</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">7.50 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Yogourt préparé avec concombres ou échalotes, herbes et épices.</p>
+          </div>
+
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Zeytoon Parvardeh maison</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">10.00 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Olives préparées avec pâte de grenade, noix, ail et herbes aromatiques.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- COLONNE 2 -->
+      <div class="menu-col">
+        
+        <!-- PLATS PRINCIPAUX -->
+        <div class="menu-category" style="margin-bottom: 3rem;">
+          <h3 style="font-family: var(--display); color: var(--red); font-size: 2rem; border-bottom: 1px solid rgba(88,15,28,0.2); padding-bottom: 0.5rem; margin-bottom: 1.5rem; text-align: center;">PLATS PRINCIPAUX</h3>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Kabab Koobideh</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">25.00 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Deux brochettes de bœuf haché aux oignons et épices, riz basmati safrané et salade.</p>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Joojeh Kabab (désossé)</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">29.99 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Poulet mariné au safran et épices, riz basmati safrané et salade.</p>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Kabab Barg</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">39.00 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Filet de bœuf grillé, riz basmati safrané et salade.</p>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Shishlik</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">55.00 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Agneau avec os mariné au safran et épices, riz basmati safrané et salade.</p>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Sabzi Polo avec agneau</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">37.00 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Jarret d'agneau braisé, riz aux herbes et salade.</p>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Ghalieh Mahi</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">38.00 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Ragoût de poisson aux herbes fraîches, ail et tamarin, riz safrané et salade.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- COLONNE 3 -->
+      <div class="menu-col">
+        <!-- DESSERTS -->
+        <div class="menu-category" style="margin-bottom: 3rem;">
+          <h3 style="font-family: var(--display); color: var(--red); font-size: 2rem; border-bottom: 1px solid rgba(88,15,28,0.2); padding-bottom: 0.5rem; margin-bottom: 1.5rem; text-align: center;">DESSERTS</h3>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Crème glacée au safran</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">8.00 $</span>
+            </div>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Ranginak</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">7.00 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Dessert traditionnel iranien à base de dattes et de noix.</p>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Croissant Dubai Chocolate</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">13.99 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Garni de crème de pistache & Knafeh.</p>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Baklava</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">7.00 $</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- BOISSONS -->
+        <div class="menu-category" style="margin-bottom: 3rem;">
+          <h3 style="font-family: var(--display); color: var(--red); font-size: 2rem; border-bottom: 1px solid rgba(88,15,28,0.2); padding-bottom: 0.5rem; margin-bottom: 1.5rem; text-align: center;">BOISSONS</h3>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Doogh</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">4.99 $</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray); margin: 0; line-height: 1.4;">Boisson traditionnelle iranienne à base de yogourt, légèrement salée et rafraîchissante.</p>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Thé / Tisane / Thé vert</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">3.00 - 4.00 $</span>
+            </div>
+          </div>
+          
+          <div class="menu-item" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--charcoal); margin: 0; font-weight: 600;">Café / Espresso / Latte</h4>
+              <span style="font-weight: 600; color: var(--red); margin-left: 1rem;">4.00 - 4.99 $</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-line" id="brandLine">
+    <div style="text-align: center; width: 100%; display: flex; justify-content: center;"><p class="brand-text" style="text-align: center !important; margin: 0 auto; display: inline-block;">L'héritage perse, servi avec âme.</p></div>
+  </section>
+
+  <section class="infos" id="infos">
+    <div class="infos-grid">
+      <div class="info-card reveal">
+        <h3>Réservation</h3>
+        <p>Réservez votre table à l'avance pour vous assurer une place dans notre salle à manger. Idéal pour les soupers en famille ou entre amis.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Service de traiteur</h3>
+        <p>Pour vos événements, nous offrons un service de traiteur. Commandez à l'avance et laissez-nous nous occuper de vos invités.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Sur mesure</h3>
+        <p>Un événement spécial ? L'équipe de Banou s'adapte à vos besoins pour vous offrir un festin persan mémorable, sur place ou à emporter.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="avis">
+    <div class="section-head reveal">
+      <p class="eyebrow">Ils en parlent</p>
+      <h2>Ce que disent nos clients</h2>
+      <a href="https://search.google.com/local/writereview?placeid=ChIJwZZ6vFq_t0wRAAAAAAA" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top: 1.5rem; font-size: 0.9rem;">Laissez-nous un avis sur Google</a>
+    </div>
+    <div class="testimonial-pin-height" id="testimonialPinHeight">
+      <div class="testimonial-stage" id="testimonialStage">
+        <div class="testi-medias testi-medias-a" id="testiMediasA">
+          <div class="testi-media"><img src="assets/avatars/sophie.webp" alt="Sophie L."></div>
+          <div class="testi-media"><img src="assets/avatars/marc-antoine.webp" alt="Marc-Antoine T."></div>
+          <div class="testi-media"><img src="assets/avatars/camille.webp" alt="Camille R."></div>
+        </div>
+        <div class="testi-medias testi-medias-b" id="testiMediasB">
+          <div class="testi-media">
+            <span class="testi-stars">★★★★★</span>
+            <p>« Le meilleur Kebab de Sherbrooke ! La viande est tendre, parfaitement grillée et les saveurs sont incroyables. »</p>
+            <span class="testi-name">Sophie L.</span>
+          </div>
+          <div class="testi-media">
+            <span class="testi-stars">★★★★★</span>
+            <p>« Une expérience chaleureuse et authentique. Leurs plats mijotés nous font voyager directement en Iran. »</p>
+            <span class="testi-name">Marc-Antoine T.</span>
+          </div>
+          <div class="testi-media">
+            <span class="testi-stars">★★★★★</span>
+            <p>« Service impeccable et portions généreuses. Mon nouveau restaurant iranien favori en ville ! »</p>
+            <span class="testi-name">Camille R.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-mobile">
+      <article class="testimonial-card">
+        <p class="testimonial-stars">★★★★★</p>
+        <p class="testimonial-quote">« Le meilleur Kebab de Sherbrooke ! La viande est tendre, parfaitement grillée et les saveurs sont incroyables. »</p>
+        <div class="testimonial-person">
+          <img src="assets/avatars/sophie.webp" alt="" loading="lazy">
+          <p class="testimonial-author">Sophie L.</p>
+        </div>
+      </article>
+      <article class="testimonial-card">
+        <p class="testimonial-stars">★★★★★</p>
+        <p class="testimonial-quote">« Une expérience chaleureuse et authentique. Leurs plats mijotés nous font voyager directement en Iran. »</p>
+        <div class="testimonial-person">
+          <img src="assets/avatars/marc-antoine.webp" alt="" loading="lazy">
+          <p class="testimonial-author">Marc-Antoine T.</p>
+        </div>
+      </article>
+      <article class="testimonial-card">
+        <p class="testimonial-stars">★★★★★</p>
+        <p class="testimonial-quote">« Service impeccable et portions généreuses. Mon nouveau restaurant iranien favori en ville ! »</p>
+        <div class="testimonial-person">
+          <img src="assets/avatars/camille.webp" alt="" loading="lazy">
+          <p class="testimonial-author">Camille R.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+    <section class="gallery" id="galerie" style="padding: 8rem 1.5rem;">
+    <div class="section-head reveal">
+      <p class="eyebrow">Au cœur de Banou</p>
+      <h2>Vivez l'expérience</h2>
+      <p class="section-sub">Découvrez nos saveurs et notre ambiance en vidéo.</p>
+    </div>
+    <div style="display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
+      <!-- Video 1 -->
+      <div style="position: relative; width: 100%; max-width: 320px; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 40px rgba(25,15,30,0.15); aspect-ratio: 9/16; background-color: var(--bg);">
+        <video id="promoVideoFish" width="100%" height="100%" preload="auto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; object-fit: cover; pointer-events: none;" autoplay muted loop playsinline>
+          <source src="assets/videos/fish.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- Video 2 -->
+      <div style="position: relative; width: 100%; max-width: 320px; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 40px rgba(25,15,30,0.15); aspect-ratio: 9/16; background-color: var(--bg);">
+        <video id="promoVideoDessert" width="100%" height="100%" preload="auto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; object-fit: cover; pointer-events: none;" autoplay muted loop playsinline>
+          <source src="assets/videos/dessert.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band reveal" id="contact">
+    <div class="cta-inner">
+      <h2>Prêt à réserver votre table ?</h2>
+      <p>Venez vivre un véritable voyage culinaire au cœur de l'Iran.</p>
+      <div class="hero-actions">
+        <a href="https://www.instagram.com/restaurant.banou" target="_blank" rel="noopener" class="btn btn-primary">Réserver une table</a>
+        <a href="tel:+18195630556" class="btn btn-outline">Appeler (819) 563-0556</a>
+      </div>
+      <div style="margin-top: 2rem;">
+        <p style="font-size: 0.9rem; color: #a1a1aa;">Vous cherchez plutôt notre <strong>service de traiteur</strong> pour un événement ?</p>
+        <a href="mailto:banourestaurant@gmail.com" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.5rem 1rem;">Formulaire de contact traiteur</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand-col reveal" style="text-align: left;">
+      <img src="assets/logotipo.png" alt="Banou Logo" style="width: 280px; max-width: 100%; height: auto; margin-bottom: 1rem; display: block;">
+      <p class="footer-tagline" style="font-size: 1.1rem; opacity: 0.9; margin: 0; font-family: var(--sans);">Cuisine persane à Sherbrooke</p>
+    </div>
+    <div class="footer-col reveal">
+      <h4>Adresse</h4>
+      <p>196 rue Wellington Nord<br>Sherbrooke, QC J1H 5C6</p>
+    </div>
+    <div class="footer-col reveal">
+      <h4>Heures</h4>
+      <p>Dimanche–Lundi : Fermé<br>
+      Mardi–Jeudi : 17h00–21h00<br>
+      Vendredi–Samedi : 17h00–22h00</p>
+    </div>
+    <div class="footer-col reveal">
+      <h4>Contact</h4>
+      <p><a href="tel:+18195630556">(819) 563-0556</a></p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/restaurant.banou/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Café restaurant Banou — Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+<script src="script.js?v=15"></script>
+
+<script>
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  const name = document.getElementById('loader-name');
+
+  if (loader && name) {
+    // Animate name in
+    gsap.to(name, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.2 });
+
+    // Wait and slide out
+    setTimeout(() => {
+      gsap.to(loader, {
+        yPercent: -100,
+        duration: 0.9,
+        ease: 'power4.inOut',
+        onComplete: () => { loader.style.display = 'none'; }
+      });
+    }, 1500);
+  }
+});
+</script>
+
+</body>
+</html>
