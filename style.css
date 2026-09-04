@@ -460,6 +460,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .footer-inner { grid-template-columns: 1fr; text-align: center; }
   .footer-inner .footer-brand-col { text-align: center !important; }
   .footer-inner .footer-brand-col img { margin-left: auto !important; margin-right: auto !important; }
+  .footer-social { justify-content: center; }
 
   .dishes, .testimonials, .gallery, .book-menu { padding-left: 1.25rem; padding-right: 1.25rem; }
   .carousel-btn { display: none; }
